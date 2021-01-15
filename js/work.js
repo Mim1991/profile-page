@@ -2,6 +2,7 @@ const borderTwo = document.querySelector(".border-two");
 const sectionTwo = document.querySelector(".section-two");
 const contentTwo = document.querySelector(".content-two");
 const shadowTwo = document.querySelector(".shadow-work");
+const workCards = document.querySelector(".work-cards");
 console.log(shadowTwo);
 
 let sectionTwoHeight = sectionTwo.offsetHeight;
@@ -17,5 +18,6 @@ window.addEventListener("scroll", () => {
 
   shadowTwo.style.height = `${scroll * 0.7 - 300}px`;
 
-  contentTwo.style.transform = `translateY(${contentTwoTransform * -150}px)`;
+  // contentTwo.style.transform = `translateY(${contentTwoTransform * -150}px)`;
+  // workCards.style.transform = `translateY(${contentTwoTransform * -150}px)`;
 });

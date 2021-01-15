@@ -230,15 +230,13 @@ nav .container {
 
 .section-two .container-narrow {
   padding: 2rem 9rem;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.section-two .content-two > * {
-  margin: 2rem;
+.content-two {
   z-index: 30;
 }
 
@@ -251,10 +249,22 @@ nav .container {
 
 .shadow-work {
   height: 10px;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  left: 0;
+  z-index: 0;
+  background: linear-gradient(to top, #151515, transparent);
 }
 
 #work-title {
   margin-top: 5rem;
+}
+
+.work-cards {
+  display: flex;
+  width: 40rem;
+  justify-content: space-between;
 }
 
 /* media queries */
@@ -279,5 +289,11 @@ nav .container {
 
   .section-two .container-narrow {
     padding: 2rem 0rem;
+  }
+
+  .work-cards {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
 }
