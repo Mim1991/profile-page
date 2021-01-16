@@ -397,22 +397,56 @@ nav .container {
 .circle-left {
   background: linear-gradient(140.66deg, #c4c4c4 40.03%, #dba0ff 85.97%);
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .circle-middle {
   background: linear-gradient(140.66deg, #c4c4c4 40.03%, #ffa0a0 85.97%);
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .circle-right {
   background: linear-gradient(140.66deg, #c4c4c4 40.03%, #a0bbff 85.97%);
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.circle-left img {
+  position: absolute;
+  width: 10rem;
+  top: -17px;
+  left: -14px;
+}
+
+.circle-middle img {
+  position: absolute;
+  width: 10rem;
+  top: -19px;
+  left: -16px;
+}
+
+.circle-right img {
+  position: absolute;
+  width: 10rem;
+  top: -21px;
+  left: -16px;
 }
 
 /* media queries */
 @media (max-width: 850px) {
   .section .container {
     grid-template-columns: 1fr;
+  }
+
+  .work-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-work {
+    width: 50%;
+    margin-bottom: 2rem;
   }
 }
 
@@ -437,5 +471,13 @@ nav .container {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .card-work {
+    width: 100%;
+  }
+
+  .content-two {
+    width: 90%;
   }
 }
