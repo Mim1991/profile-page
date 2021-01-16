@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -219,8 +227,25 @@ nav .container {
 /* section-two */
 .section-two {
   width: 100%;
-  background-color: #151515;
+  /* background-image: linear-gradient(
+      to bottom,
+      #151515,
+      #151515ed,
+      #151515cf,
+      rgba(21, 21, 21, 0.7)
+    ),
+    url("img/background-abstract.jpg"); */
+  background: linear-gradient(
+      180deg,
+      #151515 0%,
+      #151515f7 20%,
+      #151515eb 40%,
+      rgba(21, 21, 21, 0.1) 78%,
+      rgba(255, 255, 255, 0) 99.89%
+    ),
+    url("img/background-abstract.jpg");
   position: relative;
+  background-size: cover;
 }
 
 .content-two h3 {
@@ -229,7 +254,7 @@ nav .container {
 }
 
 .section-two .container-narrow {
-  padding: 2rem 9rem;
+  padding: 2rem 2rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -263,8 +288,59 @@ nav .container {
 
 .work-cards {
   display: flex;
-  width: 40rem;
+  width: 80vw;
   justify-content: space-between;
+}
+
+.card-work {
+  position: relative;
+  width: 30%;
+  margin-top: 1rem;
+  height: 30rem;
+  z-index: 5;
+  background: linear-gradient(
+    164.84deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.521) 0.01%,
+    rgba(141, 141, 141, 0.1) 100%
+  );
+  box-shadow: 3px 6px 7px rgba(255, 255, 255, 0.26);
+  /* backdrop-filter: blur(100px); */
+
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.card-work a {
+  border-radius: 1rem;
+  box-shadow: 1px 4px 15px 5px rgba(0, 0, 0, 0.17);
+  padding: 0.2rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card-left a {
+  background: linear-gradient(
+    92.9deg,
+    rgba(178, 61, 197, 0.97) 8.74%,
+    rgba(186, 163, 216, 0.84) 98.79%
+  );
+}
+
+.circle-left {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  bottom: 0%;
+  left: 90px;
+  border-radius: 50%;
 }
 
 /* media queries */
