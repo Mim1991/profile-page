@@ -266,7 +266,7 @@ nav .container {
 }
 
 .border-two {
-  background-color: ##fff;
+  background-color: #fff;
   left: 50%;
   width: 30%;
   transform: translate(-50%, 0);
@@ -305,7 +305,7 @@ nav .container {
     rgba(141, 141, 141, 0.1) 100%
   );
   box-shadow: 3px 6px 7px rgba(255, 255, 255, 0.26);
-  /* backdrop-filter: blur(100px); */
+  backdrop-filter: blur(1rem);
 
   border-radius: 30px;
   display: flex;
@@ -313,16 +313,31 @@ nav .container {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  padding: 0 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.card-work h3 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.card-work p {
+  margin-top: -2.5rem;
+  font-size: 0.8rem;
 }
 
 .card-work a {
   border-radius: 1rem;
   box-shadow: 1px 4px 15px 5px rgba(0, 0, 0, 0.17);
-  padding: 0.2rem 1.5rem;
+  padding: 0.4rem 1.5rem;
   color: white;
   font-weight: bold;
   letter-spacing: 2px;
+  margin-top: -1rem;
+}
+
+.read-btn-card {
+  margin-top: -1rem;
 }
 
 .card-left a {
@@ -333,14 +348,23 @@ nav .container {
   );
 }
 
-.circle-left {
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-  background-color: white;
-  bottom: 0%;
-  left: 90px;
+.card-left h3 {
+  color: #e9e3ff;
+}
+
+.card-left p {
+  color: #fdf2ff;
+}
+
+.circle-card {
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
+}
+
+.circle-left {
+  background: linear-gradient(140.66deg, #c4c4c4 40.03%, #dba0ff 85.97%);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* media queries */
