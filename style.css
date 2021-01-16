@@ -348,12 +348,44 @@ nav .container {
   );
 }
 
+.card-middle a {
+  background: linear-gradient(
+    92.9deg,
+    rgba(197, 61, 61, 0.97) 8.74%,
+    rgba(216, 163, 210, 0.84) 98.79%
+  );
+}
+
+.card-right a {
+  background: linear-gradient(
+    92.9deg,
+    rgba(0, 128, 168, 0.97) 8.74%,
+    rgba(201, 216, 255, 0.84) 98.79%
+  );
+}
+
 .card-left h3 {
   color: #e9e3ff;
 }
 
+.card-middle h3 {
+  color: #ffe3e8;
+}
+
+.card-right h3 {
+  color: #e3faff;
+}
+
 .card-left p {
   color: #fdf2ff;
+}
+
+.card-middle p {
+  color: #fff2f5;
+}
+
+.card-right p {
+  color: #f2f7ff;
 }
 
 .circle-card {
@@ -364,6 +396,16 @@ nav .container {
 
 .circle-left {
   background: linear-gradient(140.66deg, #c4c4c4 40.03%, #dba0ff 85.97%);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.circle-middle {
+  background: linear-gradient(140.66deg, #c4c4c4 40.03%, #ffa0a0 85.97%);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.circle-right {
+  background: linear-gradient(140.66deg, #c4c4c4 40.03%, #a0bbff 85.97%);
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
 }
 
