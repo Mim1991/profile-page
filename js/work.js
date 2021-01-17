@@ -3,7 +3,6 @@ const sectionTwo = document.querySelector(".section-two");
 const contentTwo = document.querySelector(".content-two");
 const shadowTwo = document.querySelector(".shadow-work");
 const workCards = document.querySelector(".work-cards");
-console.log(shadowTwo);
 
 let sectionTwoHeight = sectionTwo.offsetHeight;
 

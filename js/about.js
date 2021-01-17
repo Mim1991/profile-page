@@ -11,8 +11,6 @@ const border = document.querySelector(".border");
 let headerHeight = header.offsetHeight;
 let sectionHeight = section.offsetHeight;
 
-console.log(content);
-
 window.addEventListener("scroll", () => {
   let scroll = window.pageYOffset;
   let sectionY = section.getBoundingClientRect();
