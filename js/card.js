@@ -21,10 +21,12 @@ const animateLeft = (card) => {
   let cardCenter = card.offsetWidth / 2;
   let cardMidPoint = card.getBoundingClientRect().left + cardCenter;
 
+  let cardCenterHeight = card.offsetHeight / 2;
+  let cardMidHeight = card.getBoundingClientRect().top + cardCenterHeight;
+
   card.addEventListener("mousemove", (e, side) => {
     let xAxis = (cardMidPoint - e.pageX + window.innerWidth / 18) / 4;
     let yAxis = (window.innerHeight / 2 - e.pageY + 1480) / 20;
-    console.log(window.innerWidth);
     cardLeft.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
   });
 };
