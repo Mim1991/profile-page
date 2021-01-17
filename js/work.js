@@ -10,9 +10,9 @@ window.addEventListener("scroll", () => {
   const sectionTwoY = sectionTwo.getBoundingClientRect();
   const scroll = window.pageYOffset;
   const contentTwoTransform = scroll / (sectionTwoY.top + sectionTwoHeight);
-
-  if (contentTwoTransform * 30 - 30 <= 30) {
-    borderTwo.style.width = `${contentTwoTransform * 30 - 30}%`;
+  let borderWidth = contentTwoTransform * 1.009 ** (scroll - 900);
+  if (borderWidth < 100) {
+    borderTwo.style.width = `${borderWidth}%`;
   }
 
   shadowTwo.style.height = `${scroll * 0.7 - 300}px`;

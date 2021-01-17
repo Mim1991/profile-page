@@ -458,11 +458,24 @@ nav .container {
   }
 
   .work-cards {
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
   }
 
-  .card-work {
+  .card-left {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+  .card-middle {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+  .card-middle {
+    margin-left: 4%;
+  }
+
+  .card-right {
     width: 50%;
     margin-bottom: 2rem;
   }
@@ -493,6 +506,7 @@ nav .container {
 
   .card-work {
     width: 100%;
+    margin-left: 0;
   }
 
   .content-two {
