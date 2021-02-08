@@ -12,7 +12,8 @@ const description = document.querySelector(".info-middle p");
 const animateMiddleCard = (card) => {
   card.addEventListener("mousemove", (e) => {
     let xAxis = (window.innerWidth / 2 - e.pageX) / 4;
-    let yAxis = (window.innerHeight / 2 - e.pageY + 1480) / 20;
+    let yAxis =
+      (window.innerHeight / 2 - e.pageY + window.innerHeight * 2) / 20;
     card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
   });
 };
@@ -21,12 +22,11 @@ const animateLeft = (card) => {
   let cardCenter = card.offsetWidth / 2;
   let cardMidPoint = card.getBoundingClientRect().left + cardCenter;
 
-  let cardCenterHeight = card.offsetHeight / 2;
-  let cardMidHeight = card.getBoundingClientRect().top + cardCenterHeight;
-
   card.addEventListener("mousemove", (e, side) => {
-    let xAxis = (cardMidPoint - e.pageX + window.innerWidth / 18) / 4;
-    let yAxis = (window.innerHeight / 2 - e.pageY + 1480) / 20;
+    let xAxis = (cardMidPoint - e.pageX + window.innerWidth / 28) / 4;
+    let yAxis =
+      (window.innerHeight / 2 - e.pageY + window.innerHeight * 2) / 20;
+    console.log(window.innerHeight);
     cardLeft.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
   });
 };
@@ -36,8 +36,9 @@ const animateRight = (card) => {
   let cardRightMiddle = card.getBoundingClientRect().left + cardRightCenter;
 
   card.addEventListener("mousemove", (e) => {
-    let xAxis = (cardRightMiddle - e.pageX - window.innerWidth / 20) / 4;
-    let yAxis = (window.innerHeight / 2 - e.pageY + 1480) / 20;
+    let xAxis = (cardRightMiddle - e.pageX - window.innerWidth / 28) / 4;
+    let yAxis =
+      (window.innerHeight / 2 - e.pageY + window.innerHeight * 2) / 20;
     cardRight.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
   });
 };
@@ -52,11 +53,16 @@ const animateCardInOut = (card) => {
   });
 };
 
-if (window.innerWidth > 850) {
+if (window.innerWidth >= 850) {
   animateMiddleCard(cardMiddle);
   animateRight(cardRight);
   animateLeft(cardLeft);
   animateCardInOut(cardRight);
+  animateCardInOut(cardLeft);
+  animateCardInOut(cardMiddle);
+} else if (window.innerWidth < 850 && window.innerWidth >= 600) {
+  animateLeft(cardLeft);
+  animateMiddleCard(cardMiddle);
   animateCardInOut(cardLeft);
   animateCardInOut(cardMiddle);
 }

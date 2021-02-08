@@ -451,6 +451,16 @@ nav .container {
   left: -16px;
 }
 
+#container {
+  width: 1000px;
+  height: 300px;
+}
+
+#canvas3d {
+  width: 1000px !important;
+  height: 300px !important;
+}
+
 /* media queries */
 @media (max-width: 850px) {
   .section .container {
@@ -490,8 +500,13 @@ nav .container {
     font-size: 0.8rem;
   }
 
+  .content-two {
+    display: flex;
+    justify-content: center;
+  }
   .title {
     font-size: 1.2rem;
+    width: 40%;
   }
 
   .section-two .container-narrow {
